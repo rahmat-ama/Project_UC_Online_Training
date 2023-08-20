@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightslategray;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(44, 44, 44, 0.951);
+    position: sticky;
+    top: 0;
+    border-bottom: 3px solid blue;
+}
+header img {
+    width: 100%;
+    max-width: 70px;
+    margin: 0px 50px;
+}
+.navlist {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    list-style: none;
+}
+.navlist li {
+    margin: 0;
+    padding: 3.5vh 2.7vw;
+    transition: all 0.5s ease-in-out;
+}
+.navlist a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.4em;
+    transition: all 0.5s ease-in-out;
+    font-weight: 500;
+}
+.navlist li:hover {
+    background-color: lightskyblue;
+}
+.navlist a:hover {
+    color: darkblue;
+}
+
+main {
+    border: 1px solid rgba(17, 17, 17, 0);
+}
+main > img {
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    filter: grayscale(70%) brightness(60%) blur(5px);
+}
+.experience{
+    text-align: center;
+    font-size: 5em;
+    font-weight: 400;
+    color: darkblue;
+}
+
+.format1 {
+    display: inline-block;
+    position: relative;
+    border-radius: 10px;
+    margin: 5vh 6vw;
+    padding: 5px 10px;
+    font-size: 1.5em;
+    background-color: rgb(156, 156, 156);
+}
+.format1:hover {
+    transform: translateX(15vw) scale(1.5);
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+.format1 > h2 {
+    display: inline-block;
+    background-color: steelblue;
+    padding: 10px 15px;
+    position: absolute;
+    left: -5vw;
+    top: 20px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+.format1 > p {
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 25vw;
+}
+
+.format2 {
+    display: inline-block;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(156, 156, 156);
+    margin-left: 65vw;
+    font-size: 1.5em;
+    padding: 5px 10px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.format2:hover {
+    transform: translateX(-15vw) scale(1.5);
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+.format2 > h2 {
+    display: inline-block;
+    background-color: steelblue;
+    padding: 10px 15px;
+    position: absolute;
+    top: -5px;
+    left: -5vw;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+.format2 > p {
+    display: inline-block;
+    margin-left: 50px;
+    text-align: start;
+    vertical-align: middle;
+    max-width: 25vw;
+}
+
+@media only screen and (max-width: 900px) {
+    main > div {
+        text-align: center;
+    }
+    .format2 {
+        margin-left: 0;
+    }
+    .format1 > p {
+        max-width: 70vw;
+    }
+    .format2 > p {
+        max-width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .format1, .format2 {
+        margin: 5vh 0;
+        padding: 0;
+    }
+}
